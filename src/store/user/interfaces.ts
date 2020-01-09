@@ -1,7 +1,7 @@
 import { Actions } from "./actions";
 import { Selectors } from "./selectors";
 
-export interface UserContext extends Actions, Selectors {
+export interface StoreContext extends Actions, Selectors {
   $user: Store;
 }
 
@@ -12,10 +12,4 @@ export interface Store {
 export interface User {
   name: string;
   age: number;
-}
-
-export interface UseCreateStoreResponse {
-  (): UserContext;
-  Context: React.Context<UserContext>;
-  Provider: React.FunctionComponent<{}>;
 }
